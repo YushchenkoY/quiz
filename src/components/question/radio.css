@@ -1,0 +1,88 @@
+.answer-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.answer_radio_btn {
+    width: 328px;
+    height: auto;
+    margin: 4px auto;
+    border: 1px solid #D8DFE6;
+    border-radius: 16px;
+    background-color: #F5F7FA;
+    display: inline-block;
+}
+
+.answer_label {
+    display: flex;
+    width: 100%;
+    position: relative;
+    margin: 12px;
+}
+
+.answer_radio_btn input[type=radio] {
+    display: none;
+}
+.answer_radio_btn input[type=checkbox] {
+    display: none;
+}
+
+.answer {
+    color: #30455C;
+    font-size: 14px;
+    font-weight: 600;
+    text-align: left;
+    width: 250px;
+}
+
+
+
+.answer_choice {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    text-align: center;
+    background-color: #2989E9;
+    font-size: 24px;
+    line-height: 40px;
+    color: #ffffff;
+    right: 16px;
+    left: auto;
+    top:calc(50% - 20px);
+    z-index: 2;
+}
+
+.answer_choice-null{
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    text-align: center;
+    background-color: #ffffff;
+    font-size: 24px;
+    line-height: 40px;
+    border: 1px solid #D8DFE6;
+    right: 16px;
+    left: auto;
+    top:calc(50% - 20px);
+}
+
+.answer_img {
+    font-size: 24px;
+    position: absolute;
+    margin: auto;
+    right: 16px;
+    left: auto;
+    line-height: 50px;
+}
+.choice {
+    display: none;
+}
+.answer_radio_btn input[type=radio]:checked + .choice {
+    display: block;
+}
+
+.answer_radio_btn input[type=checkbox]:checked + .choice {
+    display: block;
+}

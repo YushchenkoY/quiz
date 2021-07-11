@@ -32,12 +32,12 @@ function Changes(props) {
                 </div>
                 <div className='info__text info__text-small text-center'>
                 <p>By continuing you agree to our</p>
-                <p><a>Terms of Service</a> | <a>Privacy Policy</a> | <a>Money-Back Policy</a></p>
+                <p><a href=''>Terms of Service</a> | <a href=''>Privacy Policy</a> | <a href=''>Money-Back Policy</a></p>
 
                 </div>
 
             </div>
-            <button className="btnContinue info_btn" onClick={() => {
+            <button className="btnContinue" onClick={() => {
                 props.onAnswerHandler()
             }}>Continue</button>
         </div>

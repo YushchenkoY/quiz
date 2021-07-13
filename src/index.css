@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
 @import './components/infoSlides/info.css';
 @import './components/results/results.css';
+@import './components/restComponents/restComponents.css';
 
 
 a,
@@ -32,10 +33,12 @@ body {
 
 .App-header {
   height: 64px;
+  width: 100vw;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  position: relative;
 }
 
 .App-logo {
@@ -63,7 +66,11 @@ body {
 .btnContinue:active {
   background-color: #0A6CCF
 }
-
+.btnContinue:disabled{
+  background-color: #D8DFE6;
+  color: #A1A9B3;
+  box-shadow: none;
+}
 .quiz__question {
   font-style: normal;
   font-weight: 600;
@@ -75,7 +82,17 @@ body {
 
 
 
-.openMenu,
+.openMenu{
+  position: absolute;
+  top: 25px;
+  right: 17px;
+  left: auto;
+  width: 14px;
+  height: 14px;
+  border: none;
+  background: none;
+}
+
 .closeMenu {
   position: absolute;
   top: 25px;
@@ -84,10 +101,10 @@ body {
   width: 14px;
   height: 14px;
   border: none;
-  background-color: none;
+  background: none;
 }
 
-.openMenu,
+.openMenu img,
 .closeMenu img {
   width: 14px;
   height: 14px;
@@ -105,8 +122,7 @@ body {
   overflow-x: hidden;
   overflow-y: auto;
   z-index: 900;
-  display: none;
-
+  display: flex;
 }
 
 .menu {
@@ -118,7 +134,6 @@ body {
   background-color: #FFFFFF;
   flex-direction: column;
   display: flex;
-
 }
 
 @media (min-width: 768px) {
@@ -126,7 +141,11 @@ body {
     width: 250px;
   }
 }
-
+.menu__btn-wrapper{
+position: relative;
+width: 100%;
+height: auto;
+}
 .menu button {
   border: none;
   background: none;

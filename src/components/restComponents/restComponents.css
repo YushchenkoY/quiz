@@ -1,0 +1,42 @@
+.decline-wrapper,
+.time-wrapper {
+    margin: 0 18px;
+}
+
+.decline__deny {
+    width: 122px;
+    height: 128px;
+    margin: 50px auto 0px;
+
+}
+
+.time__free {
+    width: 143px;
+    height: 128px;
+    margin: 50px auto 0px;
+}
+
+.decline__title,
+.time__title {
+    color: #30455C;
+    font-weight: 600px;
+    font-size: 22px;
+}
+
+.decline__text,
+.time__text {
+    text-align: left;
+    font-size: 16px;
+    color: #30455C;
+    margin: 4px 0;
+}
+
+.text-blue {
+    color: #2989E9;
+    font-weight: 600;
+}
+
+.decline__btn,
+.time__btn {
+    margin-top: 68px !important;
+}

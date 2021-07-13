@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import Question from './question/Question';
+import Radiobutton from './question/Radiobutton';
 import Gender from './question/Gender';
 import Checkbox from './question/Checkbox';
 
@@ -11,10 +11,11 @@ import Relationship from './infoSlides/Relationship'
 import FewMoments from './infoSlides/FewMoments'
 
 import Age from './question/Age'
+import Indicator from './question/Indicator';
 
 export default function Quiz() {
     const [answers, setAnswers] = useState([]);
-    const [id, setId] = useState(7);
+    const [id, setId] = useState(0);
 
 
     const onAnswerHandler = (answerFromComponent) => {
@@ -52,6 +53,8 @@ export default function Quiz() {
         {
             id: 2,
             // id: 3,
+            index: 1,
+            percent: 0,
             type: 'radio',
             question: 'Your body type',
             opitons: [
@@ -84,6 +87,8 @@ export default function Quiz() {
         {
             id: 3,
             // id: 4,
+            index: 2,     
+            percent: 3.8,  
             type: 'radio',
             question: 'In clothes you prefer',
             opitons: [
@@ -101,6 +106,8 @@ export default function Quiz() {
         {
             id: 4,
             // id: 5,
+            index: 3,
+            percent: 7.7,
             type: 'radio',
             question: 'Do you like to be the center of attention?',
             opitons: [
@@ -117,6 +124,8 @@ export default function Quiz() {
         {
             id: 5,
             // id: 6,
+            index: 4,
+            percent: 11.5,
             type: 'radio',
             question: 'Your thinking is more',
             opitons: [
@@ -132,6 +141,8 @@ export default function Quiz() {
         {
             id: 6,
             // id: 7,
+            index: 5,
+            percent: 15.3,
             type: 'radio',
             question: 'The perfect holiday is',
             opitons: [
@@ -156,6 +167,8 @@ export default function Quiz() {
         {
             id: 7,
             // id: 8,
+            index: 6,
+            percent: 19.2,
             type: 'checkbox',
             question: 'The best way to spend money is',
             opitons: ['On hobbies',
@@ -168,6 +181,8 @@ export default function Quiz() {
         {
             id: 8,
             // id: 9,
+            index: 7,
+            percent: 23.1,
             type: 'checkbox',
             question: 'The best way to spend money is',
             opitons: ['New experience and emotions',
@@ -179,6 +194,8 @@ export default function Quiz() {
         {
             id: 9,
             // id: 10,
+            index: 8,
+            percent: 26.9,
             type: 'radio',
             question: 'The best love song of all times is',
             opitons: [
@@ -213,6 +230,8 @@ export default function Quiz() {
         {
             id: 11,
             // id: 12,
+            index: 9,
+            percent: 30.8,
             type: 'radio',
             question: 'Your ideal woman is...',
             opitons: [
@@ -237,6 +256,8 @@ export default function Quiz() {
         {
             id: 12,
             // id: 13,
+            index: 10,
+            percent: 34.6,
             type: 'radio',
             question: 'What kind of pet would she like?',
             opitons: [
@@ -261,6 +282,8 @@ export default function Quiz() {
         {
             id: 13,
             // id: 14,
+            index: 11,
+            percent: 38.5,
             type: 'radio',
             question: 'Her favourite movie genre is...',
             opitons: [
@@ -285,6 +308,8 @@ export default function Quiz() {
         {
             id: 14,
             // id: 15,
+            index: 12,
+            percent: 42.3,
             type: 'radio',
             question: 'Her favourite movie genre is...',
             opitons: [
@@ -301,6 +326,8 @@ export default function Quiz() {
         {
             id: 15,
             // id: 16,
+            index: 13,
+            percent: 46.1,
             type: 'radio',
             question: 'Choose the lips you are crazy about',
             opitons: [
@@ -321,6 +348,8 @@ export default function Quiz() {
         {
             id: 16,
             // id: 17,
+            index: 14,
+            percent: 50,
             type: 'radio',
             question: 'Which hair color do you find the most attractive',
             opitons: [
@@ -345,6 +374,8 @@ export default function Quiz() {
         {
             id: 17,
             // id: 18,
+            index: 15,
+            percent: 53.8,
             type: 'radio',
             question: 'Would your ideal girl have a tattoo',
             opitons: [
@@ -365,6 +396,8 @@ export default function Quiz() {
         {
             id: 18,
             // id: 19,
+            index: 16,
+            percent: 57.7,
             type: 'radio',
             question: 'What about her body shape',
             opitons: [
@@ -393,6 +426,8 @@ export default function Quiz() {
         {
             id: 19,
             // id: 20,
+            index: 17,
+            percent: 61.5,
             type: 'radio',
             question: 'How is she with the attention',
             opitons: [
@@ -413,6 +448,8 @@ export default function Quiz() {
         {
             id: 20,
             // id: 21,
+            index: 18,
+            percent: 65.4,
             type: 'radio',
             question: 'What are you expecting from a woman',
             opitons: [
@@ -437,6 +474,8 @@ export default function Quiz() {
         {
             id: 21,
             // id: 22,
+            index: 19,
+            percent: 69.2,
             type: 'radio',
             question: 'In a relationship your woman should...',
             opitons: [
@@ -461,11 +500,14 @@ export default function Quiz() {
         {
             id: 22,
             // id: 23,
+            percent: 73,
             type: 'relationship'
         },
         {
             id: 23,
             // id: 24,
+            index: 20,
+            percent: 73.1,
             type: 'radio',
             question: 'Love is...',
             opitons: [
@@ -490,6 +532,8 @@ export default function Quiz() {
         {
             id: 24,
             // id: 25,
+            index: 21,
+            percent: 76.9,
             type: 'radio',
             question: 'What is your idea of a fun date',
             opitons: [
@@ -514,6 +558,8 @@ export default function Quiz() {
         {
             id: 25,
             // id: 26,
+            index: 22,
+            percent: 80.8,
             type: 'radio',
             question: 'What is a big no in a relationship',
             opitons: [
@@ -538,6 +584,8 @@ export default function Quiz() {
         {
             id: 26,
             // id: 27,
+            index: 23,
+            percent: 84.6,
             type: 'radio',
             question: 'It is really annoying when she',
             opitons: [
@@ -562,6 +610,8 @@ export default function Quiz() {
         {
             id: 27,
             // id: 28,
+            index: 24,
+            percent: 88.4,
             type: 'radio',
             question: 'The happy couple',
             opitons: [
@@ -586,6 +636,8 @@ export default function Quiz() {
         {
             id: 28,
             // id: 29,
+            index: 25,
+            percent: 92.3,
             type: 'radio',
             question: 'You would marry a woman who is',
             opitons: [
@@ -606,13 +658,15 @@ export default function Quiz() {
         {
             id: 29,
             // id: 30,
+            index: 26,
+            percent: 96.1,
             type: 'checkbox',
             question: 'The most important in the relationship is',
             opitons: ['communication',
-            'respect',
-            'boundaries',
-            'trust',
-            'support'
+                'respect',
+                'boundaries',
+                'trust',
+                'support'
             ]
         },
         {
@@ -620,30 +674,11 @@ export default function Quiz() {
             // id: 31,
             type: 'fewMoments'
         }
-        
-        
-        
-        
-
-        
-
-        
-
-
-
-
-
-        // {
-        //     id: 10,
-        //     type: 'intro',
-        // },
-
-
-
     ];
 
 
     const currentQuestion = listOfSlides[id];
+
     if (currentQuestion.type === 'gender') {
         return (
             <Gender onAnswerHandler={onAnswerHandler} question={currentQuestion} />
@@ -674,11 +709,18 @@ export default function Quiz() {
         )
     } else if (currentQuestion.type === 'radio') {
         return (
-            <Question onAnswerHandler={onAnswerHandler} question={currentQuestion} />
+            <>
+                <Indicator question={currentQuestion}/>
+                <Radiobutton onAnswerHandler={onAnswerHandler} question={currentQuestion} />
+            </>
         )
     } else if (currentQuestion.type === 'checkbox') {
         return (
-            <Checkbox onAnswerHandler={onAnswerHandler} question={currentQuestion} />
+            <>
+                <Indicator question={currentQuestion}/>
+                <Checkbox onAnswerHandler={onAnswerHandler} question={currentQuestion} />
+            </>
+
         )
     };
 

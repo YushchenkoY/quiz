@@ -1,0 +1,101 @@
+.result {
+    width: 100%;
+}
+
+.result__heading {
+    color: #30455C;
+    font-size: 35px;
+    font-weight: 600;
+}
+
+.result__text {
+    color: #5E6E80;
+    font-size: 16px;
+    margin: 0 56px;
+}
+
+.result__container {
+    margin: 22px auto;
+    width: 328px;
+    height: auto;
+    background-color: #F5F7FA;
+    border-radius: 16px;
+}
+
+.result__title {
+    color: #30455C;
+    font-size: 22px;
+    font-weight: 600;
+    padding: 25px;
+    margin: 0;
+}
+
+.result__percent {
+    color: #2989E9;
+    font-size: 89px;
+    font-weight: 600;
+    margin: 0;
+}
+
+.result__percent span {
+    font-size: 46px;
+}
+
+.result__container .result__text {
+    margin: 24px 24px 28px 24px;
+    padding-bottom: 28px;
+}
+
+.result__sky {
+    width: 272px;
+    height: 184px;
+    margin: 23px auto;
+}
+
+.result__ball {
+    width: 250px;
+    height: 184px;
+    margin: 23px auto;
+}
+
+.result__zodiac-wrapper {
+    display: flex;
+    margin: 0 auto;
+    width: 280px;
+    justify-content: space-between;
+    padding-bottom: 24px;
+}
+
+.result__zodiac {
+    width: 136px;
+    height: 112px;
+    background-color: #EDF1F5;
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+
+.result__zodiac-img {
+    margin: 24px auto 12px;
+}
+
+.result__zodiac-text {
+    color: #2989E9;
+    font-size: 16px;
+    font-weight: 600;
+    margin: 0 auto 12px;
+}
+
+.result__text-left{
+    text-align: left ;
+}
+
+.result__text-blue{
+    margin: 0 !important;
+    color: #2989E9;
+}
+.container-padding p{
+    margin: auto 0;
+}

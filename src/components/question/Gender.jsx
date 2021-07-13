@@ -13,7 +13,10 @@ function Gender(props) {
                 {props.question.answer.map((answer) => (
                     <div className="gender_radio_btn">
                         <label className="gender_label">
-                            <input type="radio" value={answer.gender} name="props.question.id" onChange={(e) => setAnswer(e.target.value)} />
+                            <input type="radio" 
+                            value={answer.gender} 
+                            name={props.question.id} 
+                            onChange={(e) => setAnswer(e.target.value)} />
                             <div className='choice gender_choice'>✓</div>
                             <p className='gender_img'>{answer.emoji}</p>
                             <p className='gender'>{answer.gender}</p>
@@ -22,7 +25,9 @@ function Gender(props) {
                 ))}
             </div>
 
-            <button className="btnContinue" onClick={() => {
+            <button className="btnContinue" 
+            disabled={!answer} 
+            onClick={() => {
                 props.onAnswerHandler(answer)
                 setAnswer("")
             }}>Continue</button>

@@ -2,6 +2,10 @@ import Quiz from './components/Quiz';
 import Logo from "./img/logo.png";
 import openMenu from './img/icon-menu.png'
 import Menu from './components/Menu';
+import Result1 from './components/results/Result1';
+import Result2 from './components/results/Result2';
+import Result3 from './components/results/Result3';
+import Result4 from './components/results/Result4';
 
 
 
@@ -17,7 +21,7 @@ function App() {
       </header>
       <Menu />
       <Quiz />
-
+      {/* <Result1 /> */}
 
     </div>
   );

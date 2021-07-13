@@ -81,8 +81,14 @@
 }
 .answer_radio_btn input[type=radio]:checked + .choice {
     display: block;
+
 }
 
 .answer_radio_btn input[type=checkbox]:checked + .choice {
     display: block;
+}
+
+
+input[type=radio]:checked{
+    background-color: red !important;
 }

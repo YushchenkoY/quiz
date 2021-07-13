@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import Question from './question/Question';
 import Gender from './question/Gender';
+import Checkbox from './question/Checkbox';
 
 // infoSlides
 import Intro from './infoSlides/Intro';
@@ -13,13 +14,13 @@ import Age from './question/Age'
 
 export default function Quiz() {
     const [answers, setAnswers] = useState([]);
-    const [id, setId] = useState(0);
+    const [id, setId] = useState(7);
 
 
     const onAnswerHandler = (answerFromComponent) => {
         setAnswers([...answers, answerFromComponent])
         setId(id + 1)
-        console.log(answerFromComponent);
+        console.log(answers);
     };
 
     const listOfSlides = [
@@ -28,7 +29,6 @@ export default function Quiz() {
             type: 'gender',
             question: 'Select your gender',
             answer: [
-                // "Male", "Female"
                 {
                     gender: 'Male',
                     emoji: '👨'
@@ -672,13 +672,13 @@ export default function Quiz() {
         return (
             <FewMoments onAnswerHandler={onAnswerHandler} />
         )
-    }
-
-
-
-    else {
+    } else if (currentQuestion.type === 'radio') {
         return (
             <Question onAnswerHandler={onAnswerHandler} question={currentQuestion} />
+        )
+    } else if (currentQuestion.type === 'checkbox') {
+        return (
+            <Checkbox onAnswerHandler={onAnswerHandler} question={currentQuestion} />
         )
     };
 

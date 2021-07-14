@@ -34,7 +34,7 @@ function App() {
           <img src={openMenu} alt='' /></button>
       </header>
       <Quiz />
-      {/* <Result1 /> */}
+      {/* <Result1 /> */} 
       {/* <MoreTime /> */}
       {/* <Decline /> */}
     </div>

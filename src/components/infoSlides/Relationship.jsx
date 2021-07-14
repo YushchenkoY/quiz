@@ -1,5 +1,15 @@
+import { useState, useEffect } from 'react'
 
 function Relationship(props) {
+    const [percent, setPersent] = useState(31);
+
+    useEffect(() => {
+        if (percent < 73) {
+            setTimeout(() => setPersent(percent + 1), 80);
+        } 
+    });
+
+
 
     return (
         <div>
@@ -9,14 +19,14 @@ function Relationship(props) {
 
             <div class="circle-wrap">
                 <div class="circle">
-                <div class="mask full">
+                    <div class="mask full">
                         <div class="fill fill-ref"></div>
                     </div>
                     <div class="mask half">
                         <div class="fill fill-ref"></div>
                     </div>
                     <div class="inside-circle">
-                        73%
+                    {percent}%
                     </div>
                 </div>
             </div>

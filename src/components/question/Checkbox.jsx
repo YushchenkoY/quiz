@@ -4,17 +4,17 @@ import './questions.css';
 function Checkbox(props) {
     const [localAnswer, setAnswer] = useState([]);
 
-
     console.log(localAnswer)
     return (
         <div>
             <p className="quiz__question" >{props.question.question}</p>
             <div className='answer-wrapper'>
                 {props.question.opitons.map((answer) => (
-                    <div className="answer_radio_btn">
+                    <div
+                        className="answer_radio_btn">
                         <label className="answer_label">
                             <input type="checkbox"
-                                key = {props.question.id + props.question.opitons.indexOf(answer)}
+                                key={props.question.id + props.question.opitons.indexOf(answer)}
                                 value={answer}
                                 name={props.question.id}
                                 onChange={(e) => {
@@ -25,7 +25,7 @@ function Checkbox(props) {
                                         setAnswer([...localAnswer2])
                                     } else {
                                         setAnswer([...localAnswer, e.target.value])
-                                        
+
                                     }
                                 }}
                             />

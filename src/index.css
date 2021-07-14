@@ -9,6 +9,9 @@ button {
   text-decoration: none;
   cursor: pointer;
 }
+label{
+  cursor: pointer;
+}
 
 body {
   margin: 0;

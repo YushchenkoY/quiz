@@ -1,4 +1,17 @@
+import { useState, useEffect } from 'react'
+
+
+
 function GoodJob(props) {
+    const [percent, setPersent] = useState(0);
+
+    useEffect(() => {
+        if (percent < 31) {
+            setTimeout(() => setPersent(percent + 1), 80);
+        } 
+    });
+
+
 
     return (
         <div>
@@ -13,12 +26,12 @@ function GoodJob(props) {
                         <div class="fill-jod fill"></div>
                     </div>
                     <div class="inside-circle">
-                        31%
+                        {percent}%
                     </div>
                 </div>
             </div>
 
-            
+
             <div className='intro__text-wrapper'>
                 <p className='info__text'>Now we have a bit of information about you. But don’t stop here! .
                     <span className='intro__text info__text-blue'>
